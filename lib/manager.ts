@@ -1,5 +1,6 @@
 import { aliexpress } from "./aliexpress";
 import { amazon } from "./amazon";
+import { twitter } from "./twitter";
 import { youtube } from "./youtube";
 
 export interface UrlCleaner {
@@ -7,7 +8,7 @@ export interface UrlCleaner {
   clean(url: URL): URL;
 }
 
-const cleaners: readonly UrlCleaner[] = [aliexpress, amazon, youtube];
+const cleaners: readonly UrlCleaner[] = [aliexpress, amazon, youtube, twitter];
 
 export function cleanUrl(input: string): string {
   const url = new URL(input);
